@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>奈良・又兵衛桜ライド | フレディちゃんねる</title>
+
+<style>
+
+body{
+    background:#0a0a0a;
+    color:white;
+    font-family:sans-serif;
+    margin:0;
+}
+
+.article-wrap{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.article-title{
+    font-size:52px;
+    font-weight:900;
+    margin-bottom:30px;
+}
+
+.article-date{
+    color:#999;
+    margin-bottom:40px;
+}
+
+.article-img{
+    width:100%;
+    border-radius:20px;
+    margin-bottom:40px;
+}
+
+.article-text{
+    font-size:20px;
+    line-height:2;
+    color:#ddd;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:60px;
+    padding:15px 35px;
+    background:#ff0000;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="article-wrap">
+
+<h1 class="article-title">
+奈良・又兵衛桜ライド
+</h1>
+
+<div class="article-date">
+2026.05.20
+</div>
+
+<img src="../images/nara.jpg" class="article-img">
+
+<div class="article-text">
+
+先日は奈良の自転車仲間
+つーたんにお誘い頂き、桜ライド🌸行ってきました🚴✨
+
+総勢12名で
+ヒルクライム天国からの桜尽くしコース😂
+
+✔︎ 距離 74.64km
+✔︎ 獲得標高 1,132m
+
+しっかり走って、しっかり楽しむ1日でした🙌
+
+今回もお馴染みのCycology関西メンバーに加えて、
+最近よくご一緒するSlowly cruisingの皆さんともライド🚴
+
+…いや、どこがスローリーやねん😂笑
+トレイン組んで全力ダウンヒルはいい思い出です🤣
+
+さらにまさかの再会！
+Cycology東海のmakotoさんともエンカウント😳
+キャノンデールのトップストーン、めちゃかっこよかった✨
+
+今回の立ち寄りスポット👇
+
+📍 多武峰ヒルクライム
+📍 紅遊茶屋（さくらもち）
+📍 又兵衛桜
+📍 吉野山の桜
+📍 cafe de Ruhe（からあげランチ）
+📍 いちごスイーツ Adèle 🍓
+📍 飛鳥川の桜
+
+どこを切り取っても春全開の最高ライド🌸
+
+企画してくれたつーたん、
+そして一緒に走ってくれた皆さん
+ありがとうございました🙌
+
+また走りましょう🚴✨
+
+ちゃんちゃん🎵
+
+</div>
+
+<a href="../index.html" class="back-btn">
+TOPへ戻る
+</a>
+
+</div>
+
+</body>
+</html>
