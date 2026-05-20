@@ -4,7 +4,764 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>フレディちゃんねる</title><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>フレディちゃんねる</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Noto Sans JP', sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    background:rgba(0,0,0,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.header-inner{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:42px;
+    font-weight:900;
+    line-height:1;
+}
+
+.logo-main{
+    color:white;
+}
+
+.logo-sub{
+    font-size:14px;
+    color:#ff0000;
+    letter-spacing:3px;
+    margin-top:5px;
+}
+
+nav ul{
+    display:flex;
+    gap:45px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0%;
+    height:2px;
+    background:#ff0000;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff0000;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(to right,
+    rgba(0,0,0,.88),
+    rgba(0,0,0,.2)),
+    url('images/header.png');
+
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at left bottom,
+    rgba(255,0,0,.35),
+    transparent 30%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:10;
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero-title{
+    font-family:'Anton', sans-serif;
+    line-height:0.85;
+    text-transform:uppercase;
+}
+
+.hero-title .white{
+    display:block;
+    font-size:160px;
+    color:white;
+    text-shadow:0 0 30px rgba(0,0,0,.45);
+}
+
+.hero-title .red{
+    display:block;
+    font-size:170px;
+    color:#ff0000;
+    text-shadow:0 0 30px rgba(0,0,0,.45);
+}
+
+.hero-sub{
+    margin-top:30px;
+    font-size:52px;
+    font-family:'Anton', sans-serif;
+    letter-spacing:6px;
+}
+
+.hero-sub span{
+    color:#ff0000;
+}
+
+.hero-desc{
+    margin-top:25px;
+    font-size:22px;
+    color:#ddd;
+    max-width:650px;
+    line-height:1.8;
+}
+
+.hero-btn{
+    margin-top:40px;
+    display:inline-block;
+    width:max-content;
+    padding:18px 45px;
+    background:#ff0000;
+    color:white;
+    text-decoration:none;
+    border-radius:60px;
+    font-weight:900;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:white;
+    color:black;
+    transform:translateY(-5px);
+}
+
+/* =========================
+MAIN LAYOUT
+========================= */
+
+.main-wrap{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    gap:40px;
+    padding:80px 0;
+}
+
+.section-title{
+    font-size:70px;
+    font-family:'Anton', sans-serif;
+    margin-bottom:40px;
+    line-height:1;
+}
+
+.section-title span{
+    color:#ff0000;
+    font-size:22px;
+    margin-left:15px;
+    font-family:'Noto Sans JP';
+    font-weight:700;
+}
+
+/* =========================
+ARTICLES
+========================= */
+
+.article-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.article-card{
+    background:#111;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.35s;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.article-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(255,0,0,.25);
+}
+
+.article-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.article-content{
+    padding:20px;
+}
+
+.category{
+    display:inline-block;
+    padding:5px 12px;
+    background:#ff0000;
+    font-size:12px;
+    font-weight:bold;
+    border-radius:30px;
+    margin-bottom:15px;
+}
+
+.article-title{
+    font-size:26px;
+    font-weight:900;
+    margin-bottom:15px;
+    line-height:1.4;
+}
+
+.article-date{
+    color:#888;
+    font-size:14px;
+}
+
+/* =========================
+SIDEBAR
+========================= */
+
+.sidebar-card{
+    background:#111;
+    border-radius:20px;
+    padding:35px;
+    border:1px solid rgba(255,255,255,.06);
+    position:sticky;
+    top:120px;
+}
+
+.sidebar-title{
+    font-size:36px;
+    font-family:'Anton', sans-serif;
+    margin-bottom:30px;
+}
+
+.profile-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    overflow:hidden;
+    margin-bottom:25px;
+    border:4px solid #ff0000;
+}
+
+.profile-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.profile-name{
+    font-size:38px;
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.profile-role{
+    color:#ccc;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.profile-text{
+    color:#aaa;
+    line-height:2;
+    margin-bottom:30px;
+}
+
+.sns{
+    display:flex;
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.sns a{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#1f1f1f;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+    transition:.3s;
+}
+
+.sns a:hover{
+    background:#ff0000;
+}
+
+.side-btn{
+    width:100%;
+    display:block;
+    text-align:center;
+    padding:18px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:900;
+    margin-bottom:15px;
+    transition:.3s;
+}
+
+.red-btn{
+    background:#ff0000;
+    color:white;
+}
+
+.white-btn{
+    border:2px solid #444;
+    color:white;
+}
+
+.side-btn:hover{
+    transform:translateY(-4px);
+}
+
+/* =========================
+VIDEO
+========================= */
+
+.video-section{
+    margin-top:100px;
+}
+
+.video-box{
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(255,0,0,.15);
+}
+
+.video-box iframe{
+    width:100%;
+    height:700px;
+    border:none;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+    margin-top:120px;
+    background:#000;
+    padding:50px 20px;
+    text-align:center;
+    color:#666;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+.article-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.hero-title .white{
+    font-size:110px;
+}
+
+.hero-title .red{
+    font-size:120px;
+}
+
+}
+
+@media(max-width:950px){
+
+.main-wrap{
+    grid-template-columns:1fr;
+}
+
+.article-grid{
+    grid-template-columns:1fr;
+}
+
+.sidebar-card{
+    position:relative;
+    top:0;
+}
+
+nav{
+    display:none;
+}
+
+.hero{
+    height:85vh;
+}
+
+.hero-title .white{
+    font-size:70px;
+}
+
+.hero-title .red{
+    font-size:80px;
+}
+
+.hero-sub{
+    font-size:32px;
+}
+
+.hero-desc{
+    font-size:17px;
+}
+
+.video-box iframe{
+    height:350px;
+}
+
+.section-title{
+    font-size:48px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header-inner">
+
+<div class="logo">
+
+<div class="logo-main">
+フレディちゃんねる
+</div>
+
+<div class="logo-sub">
+FREDDIE CHANNEL
+</div>
+
+</div>
+
+<nav>
+<ul>
+<li><a href="#">HOME</a></li>
+<li><a href="#">ROAD BIKE</a></li>
+<li><a href="#">REVIEW</a></li>
+<li><a href="#">RIDE</a></li>
+<li><a href="#">YOUTUBE</a></li>
+<li><a href="#">GUITAR</a></li>
+<li><a href="#">PROFILE</a></li>
+<li><a href="#">CONTACT</a></li>
+</ul>
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<div class="hero-title">
+
+<span class="white">
+FREDDIE
+</span>
+
+<span class="red">
+CHANNEL
+</span>
+
+</div>
+
+<div class="hero-sub">
+RIDE <span>×</span> ROCK
+</div>
+
+<div class="hero-desc">
+赤髪ローディーが送る、<br>
+ロードバイク × 音楽 × YouTubeメディア。
+</div>
+
+<a href="#" class="hero-btn">
+YouTubeチャンネルへ
+</a>
+
+</div>
+
+</section>
+
+<!-- MAIN -->
+
+<div class="main-wrap">
+
+<!-- LEFT -->
+
+<div>
+
+<section>
+
+<h2 class="section-title">
+NEW ARTICLES <span>最新記事</span>
+</h2>
+
+<div class="article-grid">
+
+<a href="article/nara-ride.html" class="article-link">
+
+<div class="article-card">
+
+<img src="images/nara.jpg">
+
+<div class="article-content">
+
+<div class="category">
+RIDE
+</div>
+
+<div class="article-title">
+奈良・又兵衛桜を巡る絶景ライド
+</div>
+
+<div class="article-date">
+2026.05.09
+</div>
+
+</div>
+
+</div>
+
+</a>
+<a href="article/recmounts.html" class="article-link">
+
+<div class="article-card">
+
+<img src="images/recmounts.jpg">
+
+<div class="article-content">
+
+<div class="category">
+REVIEW
+</div>
+
+<div class="article-title">
+レックマウント ライドオンサドルバックレビュー
+</div>
+
+<div class="article-date">
+2026.04.26
+</div>
+
+</div>
+
+</div>
+
+</a>
+
+<div class="article-card">
+
+<img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?q=80&w=1200">
+
+<div class="article-content">
+
+<div class="category">
+RIDE
+</div>
+
+<div class="article-title">
+ビワイチ200kmロングライド記録
+</div>
+
+<div class="article-date">
+2026.04.20
+</div>
+
+</div>
+
+</div>
+
+<div class="article-card">
+
+<img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1200">
+
+<div class="article-content">
+
+<div class="category">
+REVIEW
+</div>
+
+<div class="article-title">
+GARMIN Edge 1040 Solarレビュー
+</div>
+
+<div class="article-date">
+2026.04.18
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="video-section">
+
+<h2 class="section-title">
+PICK UP VIDEO <span>おすすめ動画</span>
+</h2>
+<div class="video-box">
+<iframe
+src="https://www.youtube.com/embed/ffxlBazuLNE"
+allowfullscreen>
+</iframe>
+</div>
+
+</section>
+
+</div>
+
+<!-- RIGHT -->
+
+<aside>
+
+<div class="sidebar-card">
+
+<h3 class="sidebar-title">
+プロフィール
+</h3>
+
+<div class="profile-img">
+<img src="images/profile.jpg">
+</div>
+
+<div class="profile-name">
+フレディ
+</div>
+
+<div class="profile-role">
+ロードバイクYouTuber /<br>
+ギタリスト
+</div>
+
+<div class="profile-text">
+関西を中心にロードバイクの魅力や
+機材レビュー、ライド記録を発信中！
+
+「ロードバイクをもっと本気で楽しむ」
+をテーマに活動しています。
+</div>
+
+<div class="sns">
+
+<a href=""https://www.youtube.com/@freddie0606"target="_blank">▶</a>
+<a href="https://www.instagram.com/freddie0606/"target="_blank">◎</a>
+<a href="https://x.com/freddie0606"target="_blank">𝕏</a>
+
+</div>
+
+<a href="https://www.youtube.com/@freddie0606" class="side-btn red-btn"target="_blank">
+▶ YouTubeチャンネルへ
+</a>
+
+<a href="https://www.youtube.com/@freddie0606" class="side-btn red-btn"target="_blank">
+プロフィール詳細
+</a>
+
+</div>
+
+</aside>
+
+</div>
+
+<footer>
+
+© 2026 フレディちゃんねる All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
