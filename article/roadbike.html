@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ROAD BIKE | フレディちゃんねる</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Noto Sans JP', sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    background:rgba(0,0,0,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.header-inner{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:42px;
+    font-weight:900;
+    line-height:1;
+}
+
+.logo-main{
+    color:white;
+}
+
+.logo-sub{
+    font-size:14px;
+    color:#ff0000;
+    letter-spacing:3px;
+    margin-top:5px;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff0000;
+}
+
+/* =========================
+MAIN
+========================= */
+
+.bike-wrap{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    padding:180px 0 100px;
+}
+
+.page-title{
+    font-size:90px;
+    font-family:'Anton', sans-serif;
+    line-height:1;
+    margin-bottom:15px;
+}
+
+.page-sub{
+    color:#ff0000;
+    font-size:18px;
+    letter-spacing:3px;
+    margin-bottom:80px;
+}
+
+/* =========================
+BIKE CARD
+========================= */
+
+.bike-card{
+    background:#111;
+    border-radius:30px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.06);
+    margin-bottom:60px;
+    transition:.35s;
+}
+
+.bike-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(255,0,0,.15);
+}
+
+.bike-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    display:block;
+}
+
+.bike-content{
+    padding:45px;
+}
+
+.bike-category{
+    display:inline-block;
+    padding:6px 16px;
+    background:#ff0000;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.bike-title{
+    font-size:54px;
+    font-weight:900;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.bike-desc{
+    color:#ccc;
+    line-height:2.2;
+    font-size:18px;
+    margin-bottom:40px;
+}
+
+/* =========================
+SPEC
+========================= */
+
+.spec-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.spec-box{
+    background:#1a1a1a;
+    border-radius:18px;
+    padding:25px;
+}
+
+.spec-title{
+    color:#ff0000;
+    font-size:14px;
+    margin-bottom:12px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.spec-text{
+    font-size:20px;
+    font-weight:700;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+    margin-top:100px;
+    padding:50px 20px;
+    text-align:center;
+    color:#666;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:950px){
+
+.page-title{
+    font-size:60px;
+}
+
+.bike-title{
+    font-size:38px;
+}
+
+.spec-grid{
+    grid-template-columns:1fr;
+}
+
+.bike-image img{
+    height:300px;
+}
+
+nav{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header-inner">
+
+<div class="logo">
+
+<div class="logo-main">
+フレディちゃんねる
+</div>
+
+<div class="logo-sub">
+FREDDIE CHANNEL
+</div>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="about.html">ABOUT</a></li>
+<li><a href="roadbike.html">ROAD BIKE</a></li>
+<li><a href="ride.html">RIDE</a></li>
+<li><a href="review.html">REVIEW</a></li>
+<li><a href="guitar.html">GUITAR</a></li>
+<li><a href="goods.html">GOODS</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- MAIN -->
+
+<div class="bike-wrap">
+
+<h1 class="page-title">
+ROAD BIKE
+</h1>
+
+<div class="page-sub">
+愛車紹介
+</div>
+
+<!-- BIKE 1 -->
+
+<div class="bike-card">
+
+<div class="bike-image">
+<img src="images/canyon.jpg">
+</div>
+
+<div class="bike-content">
+
+<div class="bike-category">
+MAIN BIKE
+</div>
+
+<h2 class="bike-title">
+CANYON ULTIMATE CF SL8
+</h2>
+
+<div class="bike-desc">
+
+フレディちゃんねるのメインバイク。<br><br>
+
+軽量性とエアロ性能のバランスが非常に優秀で、
+ヒルクライムからロングライドまで万能にこなせる一台🔥<br><br>
+
+ライド動画・イベント参加・機材レビューなど、
+チャンネルの中心として活躍中！
+
+</div>
+
+<div class="spec-grid">
+
+<div class="spec-box">
+
+<div class="spec-title">
+FRAME
+</div>
+
+<div class="spec-text">
+Canyon Ultimate CF SL
+</div>
+
+</div>
+
+<div class="spec-box">
+
+<div class="spec-title">
+WHEEL
+</div>
+
+<div class="spec-text">
+ARC62 / Carbon Wheel
+</div>
+
+</div>
+
+<div class="spec-box">
+
+<div class="spec-title">
+GROUPSET
+</div>
+
+<div class="spec-text">
+SHIMANO ULTEGRA Di2
+</div>
+
+</div>
+
+<div class="spec-box">
+
+<div class="spec-title">
+USE
+</div>
+
+<div class="spec-text">
+Race / Long Ride / Review
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BIKE 2 -->
+
+<div class="bike-card">
+
+<div class="bike-image">
+<img src="images/madone.jpg">
+</div>
+
+<div class="bike-content">
+
+<div class="bike-category">
+AERO BIKE
+</div>
+
+<h2 class="bike-title">
+TREK MADONE SL6 GEN6
+</h2>
+
+<div class="bike-desc">
+
+エアロ性能を重視した高速巡航マシン🔥<br><br>
+
+平坦巡航やロングライドでの安定感が魅力で、
+ロードバイクYouTube企画でも登場予定！<br><br>
+
+見た目のインパクトも強く、
+フレディちゃんねるの世界観と相性抜群。
+
+</div>
+
+<div class="spec-grid">
+
+<div class="spec-box">
+
+<div class="spec-title">
+FRAME
+</div>
+
+<div class="spec-text">
+TREK MADONE SL6
+</div>
+
+</div>
+
+<div class="spec-box">
+
+<div class="spec-title">
+TYPE
+</div>
+
+<div class="spec-text">
+AERO ROAD
+</div>
+
+</div>
+
+<div class="spec-box">
+
+<div class="spec-title">
+STYLE
+</div>
+
+<div class="spec-text">
+High Speed Ride
+</div>
+
+</div>
+
+<div class="spec-box">
+
+<div class="spec-title">
+CONTENT
+</div>
+
+<div class="spec-text">
+Review / Ride / Custom
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 フレディちゃんねる All Rights Reserved.
+
+</footer>
+
+</body>
+</html>

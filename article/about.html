@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ABOUT | フレディちゃんねる</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:'Noto Sans JP', sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    background:rgba(0,0,0,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.header-inner{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:42px;
+    font-weight:900;
+    line-height:1;
+}
+
+.logo-main{
+    color:white;
+}
+
+.logo-sub{
+    font-size:14px;
+    color:#ff0000;
+    letter-spacing:3px;
+    margin-top:5px;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff0000;
+}
+
+/* =========================
+MAIN
+========================= */
+
+.about-wrap{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:180px 0 100px;
+}
+
+.page-title{
+    font-size:90px;
+    font-family:'Anton', sans-serif;
+    margin-bottom:15px;
+    line-height:1;
+}
+
+.page-sub{
+    color:#ff0000;
+    font-size:18px;
+    letter-spacing:3px;
+    margin-bottom:80px;
+}
+
+/* =========================
+PROFILE AREA
+========================= */
+
+.profile-area{
+    display:grid;
+    grid-template-columns:400px 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.profile-image{
+    width:100%;
+    border-radius:30px;
+    overflow:hidden;
+    border:4px solid #ff0000;
+    box-shadow:0 0 40px rgba(255,0,0,.25);
+}
+
+.profile-image img{
+    width:100%;
+    display:block;
+}
+
+.profile-content h2{
+    font-size:64px;
+    margin-bottom:15px;
+    font-weight:900;
+}
+
+.profile-role{
+    color:#ff0000;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:35px;
+}
+
+.profile-text{
+    color:#ccc;
+    line-height:2.3;
+    font-size:18px;
+    margin-bottom:50px;
+}
+
+/* =========================
+INFO BOX
+========================= */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:100px;
+}
+
+.info-card{
+    background:#111;
+    padding:40px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.05);
+    transition:.3s;
+}
+
+.info-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 30px rgba(255,0,0,.2);
+}
+
+.info-title{
+    font-size:28px;
+    margin-bottom:20px;
+    font-weight:900;
+}
+
+.info-text{
+    color:#aaa;
+    line-height:2;
+}
+
+/* =========================
+SNS
+========================= */
+
+.sns-area{
+    margin-top:100px;
+    text-align:center;
+}
+
+.sns-title{
+    font-size:50px;
+    font-family:'Anton', sans-serif;
+    margin-bottom:40px;
+}
+
+.sns-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.sns-links a{
+    padding:18px 35px;
+    border-radius:60px;
+    background:#111;
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.sns-links a:hover{
+    background:#ff0000;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+    margin-top:120px;
+    padding:50px 20px;
+    text-align:center;
+    color:#666;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:950px){
+
+.profile-area{
+    grid-template-columns:1fr;
+}
+
+.info-grid{
+    grid-template-columns:1fr;
+}
+
+.page-title{
+    font-size:60px;
+}
+
+.profile-content h2{
+    font-size:42px;
+}
+
+nav{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="header-inner">
+
+<div class="logo">
+
+<div class="logo-main">
+フレディちゃんねる
+</div>
+
+<div class="logo-sub">
+FREDDIE CHANNEL
+</div>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="about.html">ABOUT</a></li>
+<li><a href="roadbike.html">ROAD BIKE</a></li>
+<li><a href="ride.html">RIDE</a></li>
+<li><a href="review.html">REVIEW</a></li>
+<li><a href="guitar.html">GUITAR</a></li>
+<li><a href="goods.html">GOODS</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- MAIN -->
+
+<div class="about-wrap">
+
+<h1 class="page-title">
+ABOUT
+</h1>
+
+<div class="page-sub">
+フレディちゃんねるについて
+</div>
+
+<!-- PROFILE -->
+
+<div class="profile-area">
+
+<div class="profile-image">
+<img src="images/prof1.jpg">
+</div>
+
+<div class="profile-content">
+
+<h2>
+フレディ
+</h2>
+
+<div class="profile-role">
+ROAD BIKE YouTuber / Guitarist
+</div>
+
+<div class="profile-text">
+
+関西を中心に活動する赤髪ローディー。<br><br>
+
+ロードバイク・ライド記録・機材レビュー・イベント参加レポートなど、
+「ロードバイクを本気で楽しむ」をテーマに発信しています🔥<br><br>
+
+YouTubeではエンタメ性も重視しながら、
+初心者から上級者まで楽しめる動画制作を目指しています。<br><br>
+
+さらにギター演奏や音楽活動も行っており、
+“RIDE × ROCK” をコンセプトに独自の世界観を展開中！
+
+</div>
+
+</div>
+
+</div>
+
+<!-- INFO -->
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<div class="info-title">
+ROAD BIKE
+</div>
+
+<div class="info-text">
+
+Canyon Ultimateを中心に、
+エアロロード・機材レビュー・カスタムなどを発信。
+
+</div>
+
+</div>
+
+<div class="info-card">
+
+<div class="info-title">
+YOUTUBE
+</div>
+
+<div class="info-text">
+
+ライドVLOG・レビュー・イベント企画など、
+ロードバイクをもっと楽しめる動画を更新中🔥
+
+</div>
+
+</div>
+
+<div class="info-card">
+
+<div class="info-title">
+GUITAR
+</div>
+
+<div class="info-text">
+
+X JAPAN・ロック系演奏動画や、
+赤髪ローディーギタリストとしての活動も展開。
+
+</div>
+
+</div>
+
+</div>
+
+<!-- SNS -->
+
+<div class="sns-area">
+
+<div class="sns-title">
+FOLLOW ME
+</div>
+
+<div class="sns-links">
+
+<a href="https://www.youtube.com/@freddie0606" target="_blank">
+YouTube
+</a>
+
+<a href="https://www.instagram.com/freddie0606/" target="_blank">
+Instagram
+</a>
+
+<a href="https://x.com/freddie0606" target="_blank">
+X (Twitter)
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 フレディちゃんねる All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
